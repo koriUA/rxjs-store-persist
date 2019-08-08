@@ -1,6 +1,6 @@
 {
   "name": "ngrx-store-persist",
-  "version": "1.0.9",
+  "version": "1.0.12",
   "description": "ngrx-store-persist depends on @ngrx/store and angular 2+",
   "main": "dist/index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/koriUA/ngrx-store-persist.git"
+    "url": "git+https://github.com/koriUA/rxjs-store-persist.git"
   },
   "keywords": [
     "redux",
@@ -23,9 +23,9 @@
   "author": "Vitalii Ivanchyshyn",
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/koriUA/ngrx-store-persist/issues"
+    "url": "https://github.com/koriUA/rxjs-store-persist.git/issues"
   },
-  "homepage": "https://gitlab.com/koriUA/ngrx-store-persist#readme",
+  "homepage": "https://github.com/koriUA/rxjs-store-persist.git#readme",
   "dependencies": {
     "deepmerge": "^4.0.0",
     "localforage": "^1.7.3"
