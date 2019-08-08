@@ -1,6 +1,7 @@
 import * as localForage from 'localforage';
 import {middlewareStorage} from "./middleware-storage";
 import {config, StorageConfig} from "./options";
+import {storageSync} from "./storage-sync";
 
 export const getAllDataFromLocalForage = (options: StorageConfig) => {
   config.keys = options.keys;
@@ -32,6 +33,10 @@ export const getAllDataFromLocalForage = (options: StorageConfig) => {
     });
 };
 
-export * from "./meta-reducer";
+export function storageSyncMetaReducer(
+    reducer: any
+): any {
+  return storageSync()(reducer);
+}
 
 export default localForage;

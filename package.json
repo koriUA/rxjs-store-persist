@@ -1,6 +1,6 @@
 {
   "name": "ngrx-store-persist",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "ngrx-store-persist depends on @ngrx/store and angular 2+",
   "main": "dist/index.js",
   "scripts": {
@@ -28,7 +28,9 @@
   "homepage": "https://gitlab.com/koriUA/ngrx-store-persist#readme",
   "dependencies": {
     "deepmerge": "^4.0.0",
-    "localforage": "^1.7.3",
+    "localforage": "^1.7.3"
+  },
+  "devDependencies": {
     "prettier": "1.18.2",
     "typescript": "3.5.3"
   }
