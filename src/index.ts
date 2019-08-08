@@ -36,7 +36,7 @@ export const getAllDataFromLocalForage = (options: StorageConfig) => {
 export function storageSyncMetaReducer(
     reducer: any
 ): any {
-  return storageSync()(reducer);
+  return storageSync(reducer);
 }
 
 export default localForage;

@@ -1,9 +1,0 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-// import {ActionReducer} from "@ngrx/store";
-const storage_sync_1 = require("./storage-sync");
-function storageSyncMetaReducer(reducer) {
-    return storage_sync_1.storageSync()(reducer);
-}
-exports.storageSyncMetaReducer = storageSyncMetaReducer;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWV0YS1yZWR1Y2VyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vc3JjL21ldGEtcmVkdWNlci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUE2QztBQUM3QyxpREFBMkM7QUFHM0MsU0FBZ0Isc0JBQXNCLENBQ3BDLE9BQVk7SUFFWixPQUFPLDBCQUFXLEVBQUUsQ0FBQyxPQUFPLENBQUMsQ0FBQztBQUNoQyxDQUFDO0FBSkQsd0RBSUMiLCJzb3VyY2VzQ29udGVudCI6WyIvLyBpbXBvcnQge0FjdGlvblJlZHVjZXJ9IGZyb20gXCJAbmdyeC9zdG9yZVwiO1xyXG5pbXBvcnQge3N0b3JhZ2VTeW5jfSBmcm9tIFwiLi9zdG9yYWdlLXN5bmNcIjtcclxuXHJcblxyXG5leHBvcnQgZnVuY3Rpb24gc3RvcmFnZVN5bmNNZXRhUmVkdWNlcihcclxuICByZWR1Y2VyOiBhbnlcclxuKTogYW55IHtcclxuICByZXR1cm4gc3RvcmFnZVN5bmMoKShyZWR1Y2VyKTtcclxufVxyXG4iXX0=
