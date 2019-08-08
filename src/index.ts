@@ -8,7 +8,7 @@ export const getAllDataFromLocalForage = (options: StorageConfig) => {
   config.keys = options.keys;
   config.storage = middlewareStorage;
   localForage.config({
-    driver      : localForage.INDEXEDDB,
+    driver      : options.driver || localForage.LOCALSTORAGE,
     name        : 'NGRX Storage',
     version     : 1.0,
     size        : 4980736,
