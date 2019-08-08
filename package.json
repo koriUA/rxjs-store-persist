@@ -1,6 +1,6 @@
 {
   "name": "ngrx-store-persist",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "ngrx-store-persist depends on @ngrx/store and angular 2+",
   "main": "dist/index.js",
   "scripts": {

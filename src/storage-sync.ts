@@ -5,41 +5,41 @@ import {config} from "./options";
 const INIT_ACTION = '@ngrx/store/init';
 const UPDATE_ACTION = '@ngrx/store/update-reducers';
 
-export const storageSync = () => (
-  reducer: any
-) => {
-  const stateKeys = validateStateKeys(config.keys);
-  const rehydratedState = rehydrateApplicationState(stateKeys, config.storage);
+export function storageSync() {
+  return function (reducer: any) {
+    const stateKeys = validateStateKeys(config.keys);
+    const rehydratedState = rehydrateApplicationState(stateKeys, config.storage);
 
-  return function (state: any, action: any) {
-    let nextState;
+    return function (state: any, action: any) {
+      let nextState;
 
-    if ((action.type === INIT_ACTION) && !state) {
-      nextState = reducer(state, action);
-    } else {
-      nextState = { ...state };
-    }
-    if (action.type === INIT_ACTION || action.type === UPDATE_ACTION) {
-      // @ts-ignore
-      const overwriteMerge = (destinationArray: any, sourceArray: any) => sourceArray;
-      const options: deepmerge.Options = {
-        arrayMerge: overwriteMerge
-      };
-      nextState = deepmerge(nextState, rehydratedState, options);
-    }
+      if ((action.type === INIT_ACTION) && !state) {
+        nextState = reducer(state, action);
+      } else {
+        nextState = {...state};
+      }
+      if (action.type === INIT_ACTION || action.type === UPDATE_ACTION) {
+        // @ts-ignore
+        const overwriteMerge = (destinationArray: any, sourceArray: any) => sourceArray;
+        const options: deepmerge.Options = {
+          arrayMerge: overwriteMerge
+        };
+        nextState = deepmerge(nextState, rehydratedState, options);
+      }
 
-    nextState = reducer(nextState, action);
+      nextState = reducer(nextState, action);
 
-    if (action.type !== INIT_ACTION) {
-      syncStateUpdate(
-        nextState,
-        stateKeys,
-        config.storage
-      );
-    }
+      if (action.type !== INIT_ACTION) {
+        syncStateUpdate(
+            nextState,
+            stateKeys,
+            config.storage
+        );
+      }
 
-    return nextState;
-  };
+      return nextState;
+    };
+  }
 };
 
 export const rehydrateApplicationState = (
