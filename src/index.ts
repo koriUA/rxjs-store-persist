@@ -30,6 +30,7 @@ export const getAllDataFromLocalForage = (options: StorageConfig) => {
         return previousValue;
       }, {});
       middlewareStorage.dataStorage = dataStorage;
+      return dataStorage;
     });
 };
 
