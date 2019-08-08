@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "noLib": false,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "outDir": "dist",
+    "rootDir": "src",
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": false,
+    "noImplicitAny": true,
+    "declaration": true,
+    "declarationDir": "@types",
+    "typeRoots": [
+      "node_modules/@types"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "@types",
+    "tests"
+  ]
+}

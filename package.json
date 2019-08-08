@@ -1,0 +1,35 @@
+{
+  "name": "ngrx-store-persist",
+  "version": "1.0.0",
+  "description": "ngrx-store-persist depends on @ngrx/store and angular 2+",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p . --newLine lf",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/koriUA/ngrx-store-persist.git"
+  },
+  "keywords": [
+    "redux",
+    "ngrx",
+    "store",
+    "IndexedDB",
+    "locastorage",
+    "websql",
+    "persist"
+  ],
+  "author": "Vitalii Ivanchyshyn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/koriUA/ngrx-store-persist/issues"
+  },
+  "homepage": "https://gitlab.com/koriUA/ngrx-store-persist#readme",
+  "dependencies": {
+    "deepmerge": "^4.0.0",
+    "localforage": "^1.7.3",
+    "prettier": "1.18.2",
+    "typescript": "3.5.3"
+  }
+}
