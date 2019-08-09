@@ -21,9 +21,9 @@ getAllDataFromLocalForage({
   driver: localForage.INDEXEDDB,
   keys: [
     'user',
-    ''
+    'posts'
   ],
-}).then(data => {
+}).then(() => {
   platformBrowserDynamic()
     .bootstrapModule(AppModule)
     .catch(err => console.log(err));
