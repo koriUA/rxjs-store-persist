@@ -38,7 +38,7 @@ export function storageSync(reducer: any) {
 
         return nextState;
     };
-};
+}
 
 export const rehydrateApplicationState = (
     keys: any[],

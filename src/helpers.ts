@@ -2,7 +2,7 @@ export const checkIsBrowserEnv = () => {
   return typeof window !== 'undefined'
 };
 
-export const validateStateKeys = (keys: any[]) => {
+export const validateStateKeys = (keys: any[] = []) => {
   return keys.map(key => {
     let attr = key;
 
