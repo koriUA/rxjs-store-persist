@@ -1,8 +1,9 @@
 {
   "name": "ngrx-store-persist",
-  "version": "1.0.21",
+  "version": "1.0.24",
   "description": "ngrx-store-persist depends on @ngrx/store and angular 2+",
   "main": "dist/index.js",
+  "types": "@types/index.d.ts",
   "scripts": {
     "build": "tsc -p . --newLine lf",
     "test": "echo \"Error: no test specified\" && exit 1"

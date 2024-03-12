@@ -1,6 +1,5 @@
 export interface StorageConfig {
   keys: any[];
-  storage: any;
   driver: any;
 }
 
