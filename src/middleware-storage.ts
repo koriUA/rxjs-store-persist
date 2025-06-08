@@ -1,8 +1,13 @@
-import { default as localforage } from './index';
+import { IndexedDBService } from './indexeddb-service.js';
 
 class MiddlewareStorage implements Storage {
   length: any;
   public dataStorage: any = {};
+  private storage: IndexedDBService;
+
+  constructor() {
+    this.storage = new IndexedDBService();
+  }
 
   getItem(key: string): string | null {
     return this.dataStorage[key];
@@ -12,12 +17,12 @@ class MiddlewareStorage implements Storage {
     return null;
   }
 
-  removeItem(key: string): void {
-    localforage.removeItem(key);
+  async removeItem(key: string): Promise<void> {
+    await this.storage.removeItem(key);
   }
 
-  setItem(key: string, value: string): void {
-    localforage.setItem(key, value);
+  async setItem(key: string, value: string): Promise<void> {
+    await this.storage.setItem(key, value);
   }
 
   clear(): void {}

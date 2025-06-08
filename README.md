@@ -18,7 +18,6 @@ import {
 } from 'ngrx-store-persist';
 
 getAllDataFromLocalForage({
-  driver: localForage.INDEXEDDB,
   keys: [
     'user',
     'posts'
@@ -40,4 +39,3 @@ StoreModule.forRoot(rootReducer, { metaReducers: [storageSyncMetaReducer] }),
 
 ##Config
 * `keys` (required) State keys to sync with storage.
-* `driver` (optional) by default equals localForage.LOCALSTORAGE. Also can be localForage.WEBSQL, localForage.INDEXEDDB.

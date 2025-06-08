@@ -1,6 +1,6 @@
 import * as deepmerge from "deepmerge";
-import {validateStateKeys} from "./helpers";
-import {config} from "./options";
+import { validateStateKeys } from "./helpers";
+import { config } from "./options";
 
 const INIT_ACTION = '@ngrx/store/init';
 const UPDATE_ACTION = '@ngrx/store/update-reducers';
@@ -15,7 +15,7 @@ export function storageSync(reducer: any) {
         if ((action.type === INIT_ACTION) && !state) {
             nextState = reducer(state, action);
         } else {
-            nextState = {...state};
+            nextState = { ...state };
         }
         if (action.type === INIT_ACTION || action.type === UPDATE_ACTION) {
             // @ts-ignore
@@ -50,15 +50,8 @@ export const rehydrateApplicationState = (
         if (storage !== undefined) {
             let stateSlice = storage.getItem(key);
             if (stateSlice) {
-                const isObjectRegex = new RegExp('{|\\[');
-                let raw = stateSlice;
-
-                if (stateSlice === 'null' || isObjectRegex.test(stateSlice.charAt(0))) {
-                    raw = JSON.parse(stateSlice);
-                }
-
                 return Object.assign({}, acc, {
-                    [key]: raw
+                    [key]: stateSlice
                 });
             }
         }
